@@ -48,6 +48,7 @@ body {
 
 .gallery-item {
   height: fit-content;
+  transition: transform 250ms ease-in;
 }
 
 /* ligthbox overlay style */
