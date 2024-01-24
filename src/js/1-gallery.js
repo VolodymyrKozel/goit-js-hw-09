@@ -68,18 +68,16 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryList = document.querySelector('.gallery');
-let markup = "";
-const elements = images.map(({ original, description, preview }) => {
+let markup = '';
+images.forEach(({ original, description, preview }) => {
   markup += `<li class="gallery-item">
 <a class="gallery-link" href="${original}">
-  <img class="gallery-image" src="${preview}" alt="${description}" width = 360 height = 200  />
+  <img class="gallery-image" src="${preview}" alt="${description}" />
 </a>
 </li>`;
 });
 galleryList.insertAdjacentHTML('afterbegin', markup);
 let lightbox = new SimpleLightbox('.gallery a', {
-  overlay: true,
-  overlayOpacity: 0.8,
   captionsData: 'alt',
   captionPosition: 'bottom',
   captionDelay: 250,

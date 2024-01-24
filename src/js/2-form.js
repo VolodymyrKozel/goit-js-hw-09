@@ -13,10 +13,8 @@ addEventListener('load', () => {
 });
 
 const handleInput = e => {
-  inputsData.email = e.currentTarget.elements.email.value;
-  inputsData.message = e.currentTarget.elements.message.value;
-  inputsData.email = inputsData.email.trim();
-  inputsData.message = inputsData.message.trim();
+  inputsData.email = e.currentTarget.elements.email.value.trim();
+  inputsData.message = e.currentTarget.elements.message.value.trim();
   localStorage.setItem(storageKey, JSON.stringify(inputsData));
 };
 const handleSubmit = e => {
