@@ -71,7 +71,7 @@ let markup = '';
 images.forEach(({ original, description, preview }) => {
   markup += `<li class="gallery-item">
 <a class="gallery-link" href="${original}">
-  <img class="gallery-image" src="${preview}" alt="${description}" />
+  <img class="gallery-image" src="${preview}" alt="${description}" width="510" height="340" />
 </a>
 </li>`;
 });
